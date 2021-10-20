@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+body{
+	width:100%;
+	height:100%;
+	
+}
+
+.image{
+    height: 25px;
+    width: 25px; 
+    position:relative;
+}
+
+.contain{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background: linear-gradient(90deg,#be3e3e,#982f3d);
+background-image: linear-gradient(to bottom right,#e40246,#02ccba);	
+}
+
+.done{
+	width:100%;
+	height:auto;
+	position:none;
+	left: 0;
+	right: 0;
+	top:-20px;
+	margin:auto;
+    float:left;   
+}
+.avatar{
+    height: 220px;
+    width: 220px;
+    border-radius: 200px;
+    border-color: red ;
+}
+.contain h1{
+	font-family: 'Julius Sans One', sans-serif;
+	font-size:1.4em;
+	color: #02b3e4;
+}
+
+.congrats{
+	position:relative;
+	left:50%;
+	top:50%;
+	max-width:800px;	transform:translate(-50%,-50%);
+	width:50%;
+	min-height:300px;
+	max-height:900px;
+	border:2px solid white;
+	border-radius:30px;
+	    box-shadow: 12px 15px 20px 0 rgba(46,61,73,.3);
+    background-image: linear-gradient(to bottom right,#02b3e4,#02ccba);
+	background:#fff;
+	text-align:center;
+	font-size:2em;
+	color: #189086;
+}
+
+.text{
+	position:relative;
+	font-weight:normal;
+	left:0;
+	right:0;
+	margin:auto;
+	width:80%;
+	max-width:800px;
+
+	font-family: 'Lato', sans-serif;
+	font-size:0.6em;
+
+}
+
+
+.circ{
+    opacity: 0;
+    stroke-dasharray: 130;
+    stroke-dashoffset: 130;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+}
+.tick{
+    stroke-dasharray: 50;
+    stroke-dashoffset: 50;
+    -webkit-transition: stroke-dashoffset 1s 0.5s ease-out;
+    -moz-transition: stroke-dashoffset 1s 0.5s ease-out;
+    -ms-transition: stroke-dashoffset 1s 0.5s ease-out;
+    -o-transition: stroke-dashoffset 1s 0.5s ease-out;
+    transition: stroke-dashoffset 1s 0.5s ease-out;
+}
+.drawn svg .path{
+    opacity: 1;
+    stroke-dashoffset: 0;
+}
+
+.regards{
+	font-size:.7em;
+}
+
+
+@media (max-width:600px){
+	.congrats h1{
+		font-size:1.2em;
+	}
+	
+	.done{
+		top:-10px;
+		width:80px;
+		height:80px;
+	}
+	.text{
+		font-size:0.5em;
+	}
+	.regards{
+		font-size:0.6em;
+	}
+}
+
+@media (max-width:500px){
+	.congrats h1{
+		font-size:1em;
+	}
+	
+	.done{
+		top:-10px;
+		width:70px;
+		height:70px;
+	}
+	
+}
+
+@media (max-width:410px){
+	.congrats h1{
+		font-size:1em;
+	}
+	
+	.congrats .hide{
+		display:none;
+	}
+	
+	.congrats{
+		width:100%;
+	}
+	
+	.done{
+		top:-10px;
+		width:50px;
+		height:50px;
+	}
+	.regards{
+		font-size:0.55em;
+	}
+	
+}
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+  }
+  
+  /* Add Animation */
+  @-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+  }
+  
+  @keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+  }
+  
+  /* The Close Button */
+  .close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+  }
+  
+  .modal-body {padding: 2px 16px; background-color: white;}
+  
+  .modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+  }
